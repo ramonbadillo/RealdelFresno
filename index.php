@@ -1,8 +1,8 @@
 <?php
-				
-	require_once $_DIR . 'lib/otherlibrary/initialize.php';
-	require_once $_DIR . 'models/Estado.php';
-	require_once $_DIR . 'models/Punto.php';
+	$temp = $_SERVER['DOCUMENT_ROOT'];	
+	require_once ($temp . 'lib/otherlibrary/initialize.php');
+	require_once ($temp . 'models/Estado.php');
+	require_once ($temp . 'models/Punto.php');
 	
   	$p= Punto::find('all');
   	

@@ -1,19 +1,10 @@
 <?php
-/**
-* 
-*/
-class usuario_controller 
-{
-	
-	function nuevo(){
-		echo 'toma .l.';
-	}
-	
-	function validate_session($name, $pass){
-		$user = Usuario::find_by_nombre($name);
+	include_once($_SERVER['DOCUMENT_ROOT'] . '/models/usuario.php');
+	//function validate_session( ){
+		$user = Usuario::find_by_nombre($_POST['nombre']);
 		
 		if($user != null){
-			if($user->password == $pass){
+			if($user->password == $_POST['pass']){
 				$_SESSION['user'] = $user->nombre;
 				$_SESSION['pass'] = $user->password;
 				//echo 'Bienvenido : ' . $_SESSION['user'];
@@ -28,9 +19,9 @@ class usuario_controller
 		{
 			echo 'No existe este usuario';
 		}
-	}
+		//}
 	
-}
+
 	
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 
-require_once $_DIR . 'lib/otherlibrary/initialize.php';
-require_once $_DIR . 'models/Punto.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/otherlibrary/initialize.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/models/Punto.php';
 
 ?>
 

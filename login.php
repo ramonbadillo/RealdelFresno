@@ -57,10 +57,10 @@
 
     <div class="container">
 
-      <form class="form-signin" method="post" action="croquis.php">
+      <form class="form-signin" method="post" action="/controllers/usuarios.php">
         <h2 class="form-signin-heading">Identifíquese</h2>
-        <input type="text" class="input-block-level" placeholder="Nombre">
-        <input type="password" class="input-block-level" placeholder="Contraseña">
+        <input type="text" class="input-block-level" placeholder="Nombre" name='nombre'>
+        <input type="password" class="input-block-level" placeholder="Contraseña" name='pass'>
 		
         <button class="btn btn-large btn-primary" type="submit">Entrar</button>
       </form>

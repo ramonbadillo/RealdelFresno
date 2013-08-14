@@ -67,14 +67,44 @@ require_once $_DIR . 'models/Punto.php';
   		
 		
 		
-		  <?php
-		  
-		  for ($=0; $ < ; $++) { 
-		  	
+		  <?php 
+		  $rows = 44; // define number of rows
+		  $cols = 5;// define number of columns
+	  
+		  echo "<table class='table table-condensed table-striped'>"; 
+		  ?>
+		  <tr>
+		      <th>ID</th>
+			  <th>FECHA</th>
+		      <th>ORIGEN</th>
+			  <th>DESTINO</th>
+			  <th>ASIENTOS</th>
+			  <th>OPCIONES</th>
+			  
+		   </tr>
+	   
+		  <?php 
+		  $nAsi = 1;
+		  for($tr=1;$tr<=$rows;$tr++){ 
+		  	echo "<tr>"; 
+		    for($td=1;$td<=$cols;$td++){
+				echo "<td>";
+
+				
+				if ($td==1)
+					echo $tr;
+				else if ($td==3)
+					echo "JORGE LUIS MEZA MARQUEZ";
+				else
+				echo "Algo de Texto";
 			
+				echo "</td>";
 			
-		  }
-		  
+			} 
+		      echo "</tr>"; 
+		  } 
+		  echo "</table>"; 
+
 		  ?>
 		
 		
